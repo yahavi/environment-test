@@ -1,0 +1,10 @@
+name: "Deploy"
+on:
+  pull_request_target:
+    types: [opened, synchronize]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: non-existent-env
+    steps:
+      - run: echo "I should not be deployed"
